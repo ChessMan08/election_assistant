@@ -1,4 +1,4 @@
-# 🗳️ VoteGuide AI — Interactive Election Process Assistant
+# 🗳️ VoteGuide AI - Interactive Election Process Assistant
 
 > An AI-powered web app that helps every Indian citizen understand the election
 > process, their voting rights, and how democracy works - in a simple, interactive,
@@ -25,9 +25,9 @@ and accessible experience.
 
 | Feature | Description |
 |---|---|
-| 📋 How Elections Work | 6 interactive accordion cards — tap to expand each step with detailed explanations and practical tips |
+| 📋 How Elections Work | 6 interactive accordion cards - tap to expand each step with detailed explanations and practical tips |
 | 🗓️ Visual Timeline | A complete end-to-end election timeline from announcement to government formation |
-| 🤖 AI Chatbot | Gemini-powered assistant for any election question — with multi-turn conversation context |
+| 🤖 AI Chatbot | Gemini-powered assistant for any election question - with multi-turn conversation context |
 | 💬 Quick Suggestions | One-tap questions to get users started instantly |
 | 🌐 Multilingual | Google Translate widget supports 10 Indian languages (Hindi, Tamil, Telugu, Bengali, Marathi, Gujarati, Kannada, Malayalam, Punjabi) |
 | ♿ Accessible | ARIA labels, keyboard navigation, focus management, reduced-motion support, high-contrast mode |
@@ -81,14 +81,13 @@ User
 ### File Structure
 ```
 election-assistant/
-├── index.html          # Single-page app — all UI structure
+├── index.html          # Single-page app - all UI structure
 ├── style.css           # Complete styling with CSS variables & animations
 ├── app.js              # Tab switching, accordion, chat UI logic
 ├── gemini.js           # Gemini API integration with error handling
-├── config.example.js   # API key template (safe to commit)
-├── config.js           # Your actual API key (gitignored — never committed)
+├── config.js           # Your API key
 ├── .gitignore          # Protects secrets and build artifacts
-└── README.md           # This file
+└── README.md           
 ```
 
 ### How a Chat Message Flows
@@ -106,7 +105,7 @@ election-assistant/
 
 | Service | How Used |
 |---|---|
-| **Google Gemini 1.5 Flash** | Powers the AI chatbot — answers user questions about elections with a custom system prompt for unbiased, accurate responses |
+| **Google Gemini 2.0 Flash** | Powers the AI chatbot - answers user questions about elections with a custom system prompt for unbiased, accurate responses |
 | **Firebase Hosting** | Hosts the static web app with global CDN, free SSL, and a `.web.app` domain |
 | **Google Translate API** | Widget in the header enables one-click translation of all page content into 10 Indian languages |
 
@@ -153,7 +152,7 @@ git clone https://github.com/ChessMan08/election_assistant.git
 cd election-assistant
 
 # 2. Set up your API key
-cp config.example.js config.js
+cp config.js
 # Open config.js and replace YOUR_GEMINI_API_KEY_HERE with your actual key
 # Get a free key at: https://aistudio.google.com
 
@@ -180,7 +179,6 @@ firebase deploy
 
 - **GitHub Repository:** [https://github.com/ChessMan08/election_assistant](https://github.com/ChessMan08/election_assistant)
 - **Live Demo:** [https://challenge2-c3d8c.web.app](https://challenge2-c3d8c.web.app)
-- **Technical Blog:** [link-to-your-blog]
 - **Official ECI:** [voters.eci.gov.in](https://voters.eci.gov.in)
 - **Voter Helpline:** 1950
 

@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VoteGuide AI — Election Process Assistant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header" role="banner">
+    <div class="header-inner">
+      <div class="logo-block">
+        <div class="logo-icon" aria-hidden="true">🗳️</div>
+        <div class="logo-text">
+          <span class="logo-title">VoteGuide AI</span>
+          <span class="logo-sub">Election Process Assistant</span>
+        </div>
+      </div>
+      <div class="header-right">
+        <div id="google_translate_element" aria-label="Language selector"></div>
+      </div>
+    </div>
+    <!-- Tricolor stripe (India theme) -->
+    <div class="tricolor-bar" aria-hidden="true">
+      <span class="stripe saffron"></span>
+      <span class="stripe white"></span>
+      <span class="stripe green"></span>
+    </div>
+  </header>
+
+  <!-- ===== HERO BANNER ===== -->
+  <section class="hero" aria-label="Welcome banner">
+    <div class="hero-content">
+      <h1 class="hero-title">Understand Your Vote.<br />Shape Your Nation.</h1>
+      <p class="hero-subtitle">
+        Everything you need to know about elections — timelines, steps, and
+        your rights — explained simply and interactively.
+      </p>
+      <div class="hero-chips" role="list" aria-label="Key features">
+        <span class="chip" role="listitem">✅ Step-by-step guide</span>
+        <span class="chip" role="listitem">🗓️ Election timeline</span>
+        <span class="chip" role="listitem">🤖 AI-powered Q&amp;A</span>
+        <span class="chip" role="listitem">🌐 Multilingual</span>
+      </div>
+    </div>
+    <div class="hero-decoration" aria-hidden="true">
+      <div class="circle c1"></div>
+      <div class="circle c2"></div>
+      <div class="circle c3"></div>
+    </div>
+  </section>
+
+  <!-- ===== TAB NAVIGATION ===== -->
+  <nav class="tab-nav" role="tablist" aria-label="Main navigation">
+    <button
+      class="tab-btn active"
+      role="tab"
+      aria-selected="true"
+      aria-controls="tab-steps"
+      id="btn-steps"
+      data-tab="steps"
+    >
+      <span class="tab-icon" aria-hidden="true">📋</span>
+      <span>How It Works</span>
+    </button>
+    <button
+      class="tab-btn"
+      role="tab"
+      aria-selected="false"
+      aria-controls="tab-timeline"
+      id="btn-timeline"
+      data-tab="timeline"
+    >
+      <span class="tab-icon" aria-hidden="true">🗓️</span>
+      <span>Timeline</span>
+    </button>
+    <button
+      class="tab-btn"
+      role="tab"
+      aria-selected="false"
+      aria-controls="tab-ai"
+      id="btn-ai"
+      data-tab="ai"
+    >
+      <span class="tab-icon" aria-hidden="true">🤖</span>
+      <span>Ask AI</span>
+    </button>
+  </nav>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main class="main-content" role="main">
+
+    <!-- ===== TAB 1: HOW ELECTIONS WORK ===== -->
+    <section
+      id="tab-steps"
+      class="tab-panel active"
+      role="tabpanel"
+      aria-labelledby="btn-steps"
+    >
+      <div class="section-header">
+        <h2>How Elections Work in India</h2>
+        <p>Click on each step to learn more. Follow the journey from announcement to results.</p>
+      </div>
+
+      <div class="steps-grid" role="list" aria-label="Election steps">
+
+        <article class="step-card" role="listitem" tabindex="0" aria-expanded="false">
+          <div class="step-header">
+            <div class="step-number" aria-hidden="true">01</div>
+            <div class="step-main">
+              <div class="step-icon" aria-hidden="true">📣</div>
+              <div class="step-info">
+                <h3>Election Announcement</h3>
+                <p class="step-short">The Election Commission officially announces the election date.</p>
+              </div>
+            </div>
+            <div class="step-toggle" aria-hidden="true">+</div>
+          </div>
+          <div class="step-body" hidden>
+            <ul class="step-details" aria-label="Step details">
+              <li>The <strong>Election Commission of India (ECI)</strong> schedules the election after consulting with state governments.</li>
+              <li>The <strong>Model Code of Conduct (MCC)</strong> kicks in immediately — limiting what ruling parties can do.</li>
+              <li>Dates for nominations, voting, and results are announced simultaneously.</li>
+              <li>This happens roughly <strong>4–6 weeks</strong> before polling day.</li>
+            </ul>
+            <div class="step-tip" role="note">
+              💡 <strong>Tip:</strong> Once the MCC is in effect, the government cannot announce new schemes or make policy promises.
+            </div>
+          </div>
+        </article>
+
+        <article class="step-card" role="listitem" tabindex="0" aria-expanded="false">
+          <div class="step-header">
+            <div class="step-number" aria-hidden="true">02</div>
+            <div class="step-main">
+              <div class="step-icon" aria-hidden="true">📝</div>
+              <div class="step-info">
+                <h3>Voter Registration</h3>
+                <p class="step-short">Check if your name is on the Electoral Roll.</p>
+              </div>
+            </div>
+            <div class="step-toggle" aria-hidden="true">+</div>
+          </div>
+          <div class="step-body" hidden>
+            <ul class="step-details">
+              <li>Every Indian citizen aged <strong>18 or above</strong> is eligible to vote.</li>
+              <li>Check your voter registration on <strong>voters.eci.gov.in</strong> or the <strong>Voter Helpline App</strong>.</li>
+              <li>If not registered, fill <strong>Form 6</strong> online at the National Voter's Service Portal (NVSP).</li>
+              <li>Your <strong>Voter ID Card (EPIC)</strong> is the primary ID for voting.</li>
+              <li>You can also use Aadhaar, Passport, or Driving License as alternate photo IDs.</li>
+            </ul>
+            <div class="step-tip" role="note">
+              💡 <strong>Tip:</strong> Registration closes well before the election. Always check early — deadlines can be 30+ days before polling.
+            </div>
+          </div>
+        </article>
+
+        <article class="step-card" role="listitem" tabindex="0" aria-expanded="false">
+          <div class="step-header">
+            <div class="step-number" aria-hidden="true">03</div>
+            <div class="step-main">
+              <div class="step-icon" aria-hidden="true">🙋</div>
+              <div class="step-info">
+                <h3>Candidate Nominations</h3>
+                <p class="step-short">Candidates file papers to officially contest the election.</p>
+              </div>
+            </div>
+            <div class="step-toggle" aria-hidden="true">+</div>
+          </div>
+          <div class="step-body" hidden>
+            <ul class="step-details">
+              <li>Parties and independents file <strong>nomination papers</strong> before the deadline set by ECI.</li>
+              <li>Candidates must pay a <strong>security deposit</strong> (₹25,000 for Lok Sabha, ₹10,000 for state assembly).</li>
+              <li>Scrutiny of nominations happens the day after the filing deadline.</li>
+              <li>Candidates can <strong>withdraw</strong> their nominations within a specified window.</li>
+              <li>The final list of contesting candidates is published.</li>
+            </ul>
+            <div class="step-tip" role="note">
+              💡 <strong>Tip:</strong> Candidates who get less than 1/6th of total votes lose their security deposit!
+            </div>
+          </div>
+        </article>
+
+        <article class="step-card" role="listitem" tabindex="0" aria-expanded="false">
+          <div class="step-header">
+            <div class="step-number" aria-hidden="true">04</div>
+            <div class="step-main">
+              <div class="step-icon" aria-hidden="true">📢</div>
+              <div class="step-info">
+                <h3>Campaign Period</h3>
+                <p class="step-short">Candidates and parties campaign to win your vote.</p>
+              </div>
+            </div>
+            <div class="step-toggle" aria-hidden="true">+</div>
+          </div>
+          <div class="step-body" hidden>
+            <ul class="step-details">
+              <li>Campaigns involve <strong>rallies, ads, door-to-door visits, social media</strong>, and public speeches.</li>
+              <li>All spending must be within limits: ₹95 lakh for Lok Sabha, ₹40 lakh for assembly (varies by state).</li>
+              <li>Campaigning must <strong>stop 48 hours before</strong> polling day — this is called the "Silent Period."</li>
+              <li>No distribution of cash, alcohol, or gifts — this is a punishable offence.</li>
+            </ul>
+            <div class="step-tip" role="note">
+              💡 <strong>Tip:</strong> You can report campaign violations on the cVIGIL app by ECI — upload photos or videos as evidence!
+            </div>
+          </div>
+        </article>
+
+        <article class="step-card" role="listitem" tabindex="0" aria-expanded="false">
+          <div class="step-header">
+            <div class="step-number" aria-hidden="true">05</div>
+            <div class="step-main">
+              <div class="step-icon" aria-hidden="true">🗳️</div>
+              <div class="step-info">
+                <h3>Polling Day</h3>
+                <p class="step-short">The day you cast your vote at your local booth.</p>
+              </div>
+            </div>
+            <div class="step-toggle" aria-hidden="true">+</div>
+          </div>
+          <div class="step-body" hidden>
+            <ul class="step-details">
+              <li>Locate your <strong>polling booth</strong> using your Voter ID or the ECI website.</li>
+              <li>Bring a valid photo ID. Booths are typically open from <strong>7 AM to 6 PM</strong>.</li>
+              <li>You'll press a button on the <strong>Electronic Voting Machine (EVM)</strong> next to your chosen candidate's name and symbol.</li>
+              <li>After voting, your finger is marked with <strong>indelible ink</strong> on the left index finger.</li>
+              <li>A <strong>VVPAT</strong> (Voter Verifiable Paper Audit Trail) slip shows your vote for 7 seconds for verification.</li>
+            </ul>
+            <div class="step-tip" role="note">
+              💡 <strong>Tip:</strong> Your employer is legally required to give you paid leave on election day. It's your right!
+            </div>
+          </div>
+        </article>
+
+        <article class="step-card" role="listitem" tabindex="0" aria-expanded="false">
+          <div class="step-header">
+            <div class="step-number" aria-hidden="true">06</div>
+            <div class="step-main">
+              <div class="step-icon" aria-hidden="true">📊</div>
+              <div class="step-info">
+                <h3>Counting &amp; Results</h3>
+                <p class="step-short">Votes are counted and the winner is declared.</p>
+              </div>
+            </div>
+            <div class="step-toggle" aria-hidden="true">+</div>
+          </div>
+          <div class="step-body" hidden>
+            <ul class="step-details">
+              <li>Counting typically happens 1–2 days after polling closes across all phases.</li>
+              <li>EVM results are matched with VVPAT slips for verification in selected booths.</li>
+              <li>The candidate with the <strong>most votes</strong> (First Past The Post system) wins.</li>
+              <li>Results are declared on ECI's website in real-time as counting proceeds.</li>
+              <li>The winning party's leader is invited by the President to form the government.</li>
+            </ul>
+            <div class="step-tip" role="note">
+              💡 <strong>Tip:</strong> India uses a "First Past The Post" system — you don't need a majority, just more votes than anyone else in your constituency.
+            </div>
+          </div>
+        </article>
+
+      </div><!-- end .steps-grid -->
+    </section>
+
+    <!-- ===== TAB 2: TIMELINE ===== -->
+    <section
+      id="tab-timeline"
+      class="tab-panel"
+      role="tabpanel"
+      aria-labelledby="btn-timeline"
+      hidden
+    >
+      <div class="section-header">
+        <h2>Election Timeline</h2>
+        <p>A typical Lok Sabha election follows this schedule from announcement to swearing-in.</p>
+      </div>
+
+      <div class="timeline" role="list" aria-label="Election timeline">
+
+        <div class="timeline-item" role="listitem" tabindex="0">
+          <div class="tl-marker" aria-hidden="true">
+            <span class="tl-dot"></span>
+          </div>
+          <div class="tl-content">
+            <div class="tl-badge">Day 1</div>
+            <h3>📣 Official Announcement</h3>
+            <p>Election Commission announces dates, activates Model Code of Conduct.</p>
+            <div class="tl-meta">~6 weeks before polling</div>
+          </div>
+        </div>
+
+        <div class="timeline-item" role="listitem" tabindex="0">
+          <div class="tl-marker" aria-hidden="true">
+            <span class="tl-dot"></span>
+          </div>
+          <div class="tl-content">
+            <div class="tl-badge">Day 3–7</div>
+            <h3>📝 Nomination Filing Opens</h3>
+            <p>Candidates submit nomination papers to Returning Officers in their constituencies.</p>
+            <div class="tl-meta">Window stays open for ~1 week</div>
+          </div>
+        </div>
+
+        <div class="timeline-item" role="listitem" tabindex="0">
+          <div class="tl-marker" aria-hidden="true">
+            <span class="tl-dot"></span>
+          </div>
+          <div class="tl-content">
+            <div class="tl-badge">Day 8</div>
+            <h3>🔍 Scrutiny of Nominations</h3>
+            <p>Election officers verify that all nomination papers are valid and complete.</p>
+            <div class="tl-meta">Invalid papers are rejected here</div>
+          </div>
+        </div>
+
+        <div class="timeline-item" role="listitem" tabindex="0">
+          <div class="tl-marker" aria-hidden="true">
+            <span class="tl-dot"></span>
+          </div>
+          <div class="tl-content">
+            <div class="tl-badge">Day 10</div>
+            <h3>✂️ Withdrawal Deadline</h3>
+            <p>Last day for candidates to withdraw. Final list of contestants published.</p>
+            <div class="tl-meta">Ballot paper order is set</div>
+          </div>
+        </div>
+
+        <div class="timeline-item" role="listitem" tabindex="0">
+          <div class="tl-marker" aria-hidden="true">
+            <span class="tl-dot"></span>
+          </div>
+          <div class="tl-content">
+            <div class="tl-badge">Day 11–38</div>
+            <h3>📢 Campaign Period</h3>
+            <p>Parties and candidates hold rallies, ads, and outreach to voters.</p>
+            <div class="tl-meta">Spending limits strictly enforced</div>
+          </div>
+        </div>
+
+        <div class="timeline-item" role="listitem" tabindex="0">
+          <div class="tl-marker" aria-hidden="true">
+            <span class="tl-dot"></span>
+          </div>
+          <div class="tl-content">
+            <div class="tl-badge">Day 38</div>
+            <h3>🤫 Silent Period Begins</h3>
+            <p>All campaigning must stop 48 hours before polling day. No speeches, ads or canvassing.</p>
+            <div class="tl-meta">MCC strictly enforced here</div>
+          </div>
+        </div>
+
+        <div class="timeline-item highlight" role="listitem" tabindex="0">
+          <div class="tl-marker" aria-hidden="true">
+            <span class="tl-dot pulse"></span>
+          </div>
+          <div class="tl-content">
+            <div class="tl-badge primary">Day 40</div>
+            <h3>🗳️ Polling Day — VOTE!</h3>
+            <p>Booths open 7AM–6PM. Bring your Voter ID. Press the EVM button. Get inked. Done!</p>
+            <div class="tl-meta">Your most important civic action</div>
+          </div>
+        </div>
+
+        <div class="timeline-item" role="listitem" tabindex="0">
+          <div class="tl-marker" aria-hidden="true">
+            <span class="tl-dot"></span>
+          </div>
+          <div class="tl-content">
+            <div class="tl-badge">Day 42–45</div>
+            <h3>📊 Vote Counting &amp; Results</h3>
+            <p>EVMs are opened, votes counted, VVPAT verified. Winners declared constituency-by-constituency.</p>
+            <div class="tl-meta">Results updated live on ECI website</div>
+          </div>
+        </div>
+
+        <div class="timeline-item" role="listitem" tabindex="0">
+          <div class="tl-marker" aria-hidden="true">
+            <span class="tl-dot"></span>
+          </div>
+          <div class="tl-content">
+            <div class="tl-badge">Day 50–60</div>
+            <h3>🏛️ Government Formation</h3>
+            <p>Winning party/alliance leader meets the President. Sworn in as Prime Minister. Cabinet formed.</p>
+            <div class="tl-meta">New government takes charge</div>
+          </div>
+        </div>
+
+      </div><!-- end .timeline -->
+
+      <div class="timeline-note" role="note">
+        <strong>Note:</strong> Lok Sabha elections are held in multiple phases (up to 7 phases across different states). The timeline above shows a single-phase constituency. Some states vote on different dates.
+      </div>
+
+    </section>
+
+    <!-- ===== TAB 3: ASK AI ===== -->
+    <section
+      id="tab-ai"
+      class="tab-panel"
+      role="tabpanel"
+      aria-labelledby="btn-ai"
+      hidden
+    >
+      <div class="section-header">
+        <h2>Ask VoteGuide AI</h2>
+        <p>Got a question about elections? Ask anything — from voter registration to how EVMs work.</p>
+      </div>
+
+      <!-- Quick suggestion chips -->
+      <div class="suggestion-chips" role="list" aria-label="Suggested questions">
+        <button class="suggestion-chip" role="listitem" data-question="How do I register to vote in India?">
+          How do I register to vote?
+        </button>
+        <button class="suggestion-chip" role="listitem" data-question="What ID documents do I need to bring to the polling booth?">
+          What ID to bring to booth?
+        </button>
+        <button class="suggestion-chip" role="listitem" data-question="How does the EVM machine work?">
+          How does EVM work?
+        </button>
+        <button class="suggestion-chip" role="listitem" data-question="What is the Model Code of Conduct?">
+          What is Model Code of Conduct?
+        </button>
+        <button class="suggestion-chip" role="listitem" data-question="What is NOTA and how do I use it?">
+          What is NOTA?
+        </button>
+        <button class="suggestion-chip" role="listitem" data-question="How are votes counted in India?">
+          How are votes counted?
+        </button>
+      </div>
+
+      <!-- Chat window -->
+      <div class="chat-container" role="region" aria-label="AI Chat">
+        <div
+          class="chat-messages"
+          id="chatMessages"
+          role="log"
+          aria-live="polite"
+          aria-label="Chat messages"
+        >
+          <!-- Welcome message -->
+          <div class="message ai-message" role="article" aria-label="AI message">
+            <div class="message-avatar" aria-hidden="true">🤖</div>
+            <div class="message-content">
+              <div class="message-bubble">
+                <p>Namaste! 🙏 I'm <strong>VoteGuide AI</strong>, your personal election guide.</p>
+                <p>I can help you understand:</p>
+                <ul>
+                  <li>📋 How to register as a voter</li>
+                  <li>🗓️ Election schedules and timelines</li>
+                  <li>🗳️ How to vote on polling day</li>
+                  <li>📜 Your rights as a voter</li>
+                  <li>⚖️ How results are counted</li>
+                </ul>
+                <p>What would you like to know?</p>
+              </div>
+              <div class="message-time" aria-label="Sent time">Just now</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Typing indicator (hidden by default) -->
+        <div class="typing-indicator" id="typingIndicator" hidden aria-live="polite" aria-label="AI is typing">
+          <div class="message-avatar" aria-hidden="true">🤖</div>
+          <div class="typing-dots" aria-label="Loading">
+            <span></span><span></span><span></span>
+          </div>
+        </div>
+
+        <!-- Chat input -->
+        <div class="chat-input-area" role="form" aria-label="Send a message">
+          <textarea
+            id="chatInput"
+            class="chat-input"
+            placeholder="Ask anything about elections..."
+            rows="1"
+            aria-label="Type your question here"
+            maxlength="500"
+          ></textarea>
+          <button
+            id="sendBtn"
+            class="send-btn"
+            aria-label="Send message"
+            title="Send message"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+          </button>
+        </div>
+        <div class="chat-footer-note" role="note">
+          VoteGuide AI can make mistakes. Always verify important information with official ECI sources.
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <strong>VoteGuide AI</strong> — Built for PromptWars Challenge by H2S × Google for Developers
+      </div>
+      <div class="footer-right">
+        <a href="https://voters.eci.gov.in" target="_blank" rel="noopener noreferrer" aria-label="Official ECI website (opens in new tab)">Official ECI Website ↗</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== GOOGLE TRANSLATE ===== -->
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement(
+        {
+          pageLanguage: 'en',
+          includedLanguages: 'en,hi,ta,te,bn,mr,gu,kn,ml,pa',
+          layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+          autoDisplay: false
+        },
+        'google_translate_element'
+      );
+    }
+  </script>
+  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async></script>
+
+  <!-- ===== CONFIG & APP SCRIPTS ===== -->
+  <!-- 
+    IMPORTANT: Create config.js from config.example.js and add your API key.
+    config.js is gitignored — never commit it.
+  -->
+  <script src="config.js"></script>
+  <script src="gemini.js"></script>
+  <script src="app.js"></script>
+
+</body>
+</html>
